@@ -1,0 +1,138 @@
+@font-face {
+    font-family: digital;
+    src: url(../font/digital-7.ttf);
+}
+
+:root {
+    --nuberkeyColor: #000000;
+    --actionColor: #21c587;
+    --oparetorColor: #000000;
+    --oparetorbg: #00ff97;
+}
+.ui-content{
+    /* padding: ; */
+    width: 94vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+#homePage{
+    background: #a2a2a2;
+    font-family: digital;
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 18px;
+}
+
+.monitor-section input{
+    font-size: 50px;
+    text-align: right; 
+    font-family: digital;
+    background: #ccc;
+    box-shadow: inset -1px 0px 7px 0px black;
+}
+/* top-operators-section */
+.top-operators-key{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 0px;
+    overflow: hidden;
+}
+.top-operators-key a{
+    width: 100%;
+    font-size: 48px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* keyword-section */
+.keyword-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-section {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.number-section a {
+    width: 100%;
+    font-size: 58px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--nuberkeyColor) !important;
+}
+
+/* operators */
+.operators {
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background: var(--oparetorbg) !important;
+}
+.operators a {
+    width: 100%;
+    font-size: 58px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--oparetorColor) !important;
+}
+
+.clear,
+.number-section .equle{
+    color: var(--actionColor) !important;
+}
+
+
+/* placeholder animation */
+input, input::-webkit-input-placeholder {
+    color: var(--main-text-color);
+    -webkit-animation: anim 0.5s infinite;
+    animation: anim 0.5s infinite;
+}
+
+@keyframes anim {
+    0% {
+        --main-text-color: #ccc;
+    }
+
+    100% {
+        --main-text-color: #000;
+    }
+}
+
+
+/* solar */
+.solar{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background: #9E735C;
+    box-shadow: inset 0 0 5px 0 #000000;
+    float: right;
+    border-radius: 5px;
+}
+
+.solar div{
+    width: 33%;
+    height: 32px;
+    border-right: 2px solid #A18E7F;
+}
+.solar div:last-child{
+    border-right: none;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="jquery-mobile-lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>jQ calculator</title>
+</head>
+
+<body>
+
+    <div data-role="page" id="homePage">
+        <div role="main" class="ui-content">
+            <div class="topSection">
+                <div class="monitor-section">
+                    <input type="text" placeholder="0">
+                </div>
+                <div class="solar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="keyButton">
+                <div class="top-operators-key">
+                    <a href="#" class="clear">C</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+                <div class="keyword-section">
+                    <div class="number-section">
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">0</a>
+                        <a href="#">.</a>
+                        <a href="#" class="equle">=</a>
+                    </div>
+                    <div class="operators">
+                        <!-- <a href="#" oparet="%">&#37;</a> -->
+                        <a href="#" oparet="/">&#247;</a>
+                        <a href="#" oparet="*">&#215;</a>
+                        <a href="#" oparet="-">&#8722;</a>
+                        <a href="#" oparet="+">&#43;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!------------------------------------------------------------------>
+    <!----------------------main scripts-------------------------------->
+    <!------------------------------------------------------------------>
+    <script src="cordova.js"></script>
+    <script src="jquery-mobile-lib/jquery.min.js"></script>
+
+    <!--------allows page sections/divisions to be hidden--------------->
+    <script>
+        $(document).bind("mobileinit", function () {
+            $.extend($.mobile, {
+                autoInitializePage: true,
+                defaultPageTransition: 'slide',
+                pushStateEnabled: true
+            });
+
+            $(document).on("pagebeforecreate", '#homePage', function () {
+                
+            });
+
+            $(document).on('pagecontainershow', function (event, ui) {
+                ui.prevPage.remove();
+            });
+
+        });
+    </script>
+
+    <script src="jquery-mobile-lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
